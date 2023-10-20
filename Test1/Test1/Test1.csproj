@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="dll\**" />
+    <Compile Remove="Themes\**" />
+    <EmbeddedResource Remove="dll\**" />
+    <EmbeddedResource Remove="Themes\**" />
+    <None Remove="dll\**" />
+    <None Remove="Themes\**" />
+    <Page Remove="dll\**" />
+    <Page Remove="Themes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="CustomControl1.cs" />
+    <Compile Remove="Style.xaml.cs" />
+    <Compile Remove="styles\CircleButton.xaml.cs" />
+    <Compile Remove="styles\CircleButtonDetail.xaml.cs" />
+    <Compile Remove="styles\CircleButtonFlyoutMenuItem.cs" />
+    <Compile Remove="styles\Page1.cs" />
+    <Compile Remove="ViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="doc\表格1.xlsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Style.xaml" />
+    <Page Remove="styles\CircleButton.xaml" />
+    <Page Remove="styles\CircleButtonDetail.xaml" />
+    <Page Remove="styles\Style.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HandyControl" Version="3.4.0" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="ScottPlot.WPF" Version="4.1.68" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
+    <PackageReference Include="unvell.ReoGridWPF.dll" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="doc\表格1.xlsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="styles\" />
+  </ItemGroup>
+
+</Project>
